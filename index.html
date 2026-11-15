@@ -284,7 +284,7 @@ const IM={"bn": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPd
 const PN={p:'폰',n:'나이트',b:'비숍',r:'룩',q:'퀸',k:'킹'};let dis=0,fl='',flr=0,TL=0,pp=null,lmk=null;
 const $=s=>document.querySelector(s),V={p:1,n:3,b:3,r:5,q:9},NM={w:'백',b:'흑'},ST='♠♥♦♣',RL=n=>n<11?n:'JQKA'[n-11],PG={k:'♚︎',q:'♛︎',r:'♜︎',b:'♝︎',n:'♞︎',p:'♟︎'};
 const CN=['하이카드','원페어','투페어','트리플','스트레이트','플러시','풀하우스','포카드','스트레이트 플러시'],rnd=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a},oth=t=>t=='w'?'b':'w';
-const GCID='';/* 구글 로그인을 쓰려면 Google Cloud에서 발급한 OAuth 웹 클라이언트 ID를 여기에 입력하세요 */
+const GCID='4930713802-505mf9ec4hhpg9hu8krvvaclr77f5n7n.apps.googleusercontent.com';/* 구글 로그인을 쓰려면 Google Cloud에서 발급한 OAuth 웹 클라이언트 ID를 여기에 입력하세요 */
 const LV={e:{ms:300,d:2,mc:30,noise:150,bl:.2,name:'쉬움',r:700,sk:0,err:1000,pb:300,rnd:.35},n:{ms:1700,d:5,mc:240,noise:0,bl:0,name:'보통',r:1400,sk:1,err:200,pb:128,rnd:0},h:{ms:3600,d:8,mc:600,noise:0,bl:0,name:'어려움',r:1800,sk:3,err:200,pb:128,rnd:0}};
 let T0=300000,INC=3000,PT=10000;const MMN=6,MMP='choss-mm1-',ICE=[{urls:'stun:stun.l.google.com:19302'},{urls:'stun:stun1.l.google.com:19302'},{urls:'stun:global.stun.twilio.com:3478'},{urls:['turn:openrelay.metered.ca:80','turn:openrelay.metered.ca:443','turn:openrelay.metered.ca:443?transport=tcp'],username:'openrelayproject',credential:'openrelayproject'}];
 let G,me,mode,sel=null,pk=[],leg=[],RC='',cv='home',ACC=null,PI=null,aiLv='n',peer=null,conn=null,isHost=false,kind='',netVer=0,lastV=-1,lastRx=0,dropAt=0,expired=false,hb=null,tk=null,gtok='',myTok='',started=false,mm=null,rated='',lastRate=null,hostId='',phKey='',sp=null,peerProf=null,rcBusy=0,rcT=0,reconnectPending=false;
