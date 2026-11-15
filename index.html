@@ -393,7 +393,7 @@ function pickMove(B){
 function eq(mine,cm,hand,k,n,tw){const seen=new Set([...hand,...cm,...mine]),un=[...Array(52).keys()].filter(x=>!seen.has(x)),z=Math.max(0,4-cm.length),take=z+k;if(un.length<take)return .5;let w=0;for(let i=0;i<n;i++){const u=un.slice();for(let j=0;j<take;j++){const q=j+(Math.random()*(u.length-j)|0);[u[j],u[q]]=[u[q],u[j]]}const c=[...cm,...u.slice(0,z)],a=cmp(best(mine,c),best(u.slice(z,z+k),c));if(a>0||(!a&&tw))w++}return w/n}
 const aiPick=(h,n,att,k)=>{let b,bs=-1;const go=(i,a)=>{if(a.length==n){const q=eq(a,[],h,k,LV[aiLv].mc,!att);if(q>bs){bs=q;b=a}return}for(;i<h.length;i++)go(i+1,[...a,h[i]])};go(0,[]);return b};
 // ================= Stockfish (AI 체스 엔진) =================
-const SF_URLS=['https://cdn.jsdelivr.net/npm/stockfish@11.0.0/src/stockfish.asm.js','https://unpkg.com/stockfish@11.0.0/src/stockfish.asm.js'];
+const SF_URLS=['./stockfish-19-lite-single.js'];
 let sfW=null,sfP=null,sfFail=0,aiBusy=0,aiGen=0;
 function sfTry(u){return new Promise((ok,no)=>{let w;try{w=/^https?:\/\//.test(u)&&u.indexOf(location.origin)!==0?new Worker(URL.createObjectURL(new Blob(['importScripts('+JSON.stringify(u)+')'],{type:'text/javascript'}))):new Worker(u)}catch(e){return no(e)}
 const tm=setTimeout(()=>{try{w.terminate()}catch(e){}no(new Error('timeout'))},60000);let st=0;
